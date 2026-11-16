@@ -1,0 +1,16 @@
+# RETO LEGAL — lo que NO debe subirse al repositorio Git para Render.
+# El Dockerfile compila cliente y servidor desde el código fuente, así
+# que ningún archivo generado hace falta en el repo.
+node_modules/
+.bun-cache/
+app.db
+app.db-*
+data/
+client/dist/
+client/dist-cvm/
+server/dist/
+deploy/dist/
+.space-build/
+.space-build-cvm/
+.harness/
+audits/

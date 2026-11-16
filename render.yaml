@@ -1,0 +1,19 @@
+# RETO LEGAL — Blueprint de Render.
+#
+# Al conectar el repositorio, Render lee este archivo y crea el Web
+# Service ya configurado: runtime Docker (usa el Dockerfile de la raíz),
+# chequeo de salud en /healthz y la base SQLite en /tmp (disco efímero
+# del plan gratuito; las salas son por partida y no necesitan disco
+# persistente). No hay variables secretas: el juego no usa credenciales.
+# Render inyecta PORT automáticamente y el servidor lo respeta.
+services:
+  - type: web
+    name: reto-legal
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /healthz
+    envVars:
+      - key: DATABASE_PATH
+        value: /tmp/reto-legal.db

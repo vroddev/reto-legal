@@ -1,0 +1,13 @@
+node_modules
+.bun-cache
+client/dist
+client/dist-cvm
+server/dist
+deploy/dist
+app.db
+app.db-*
+data
+audits
+.space-build
+.harness
+.git

@@ -1,0 +1,8 @@
+{
+  "entry": "client/dist/index.html",
+  "managedCronJobs": [],
+  "name": "RETO LEGAL",
+  "platformVersion": 28,
+  "runtime": "typescript",
+  "slug": "quiz-legal-totalsec"
+}
